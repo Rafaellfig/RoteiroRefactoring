@@ -34,12 +34,8 @@ public int getPriceCode() {
           throw new IllegalArgumentException("Incorrect Price Code");
     }
  }
-  public int getFrequentRenterPoints(int daysRented){
-    if ((getPriceCode() == Movie.NEW_RELEASE) && (daysRented > 1)) {
-        return (2);
-     } else {
-        return (1);
-     }
+ public int getFrequentRenterPoints(int daysRented) {
+   return _price.getFrequentRenterPoints(daysRented);
 }
 
   public String getTitle (){
