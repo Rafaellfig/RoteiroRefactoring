@@ -9,11 +9,9 @@ public class Statement {
         "\n";
         while (rentals.hasMoreElements()) {
            Rental each = (Rental) rentals.nextElement();
-           //show figures for this rental
            result += "\t" + each.getMovie().getTitle()+ "\t" +
            String.valueOf(each.getCharge()) + "\n";
         }
-        //add footer lines
         result += "Amount owed is " +
         String.valueOf(aCustomer.getTotalCharge()) + "\n";
         result += "You earned " +
